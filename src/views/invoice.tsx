@@ -1,30 +1,32 @@
 import * as M from "@mui/material"
 import HomeCard from "../components/homaCard";
-import { MenuItemMockData } from "../helpers/data";
 import CustomSelect from "../components/customSelect";
+import { MenuItemMockData } from "../helpers/data";
 import StyledTableRow from "../components/styledTableRow";
 
-const Home = () => {
+const Invoice = () => {
     return (
         <div className="p-4">
             <div className="bg-white p-4 flex justify-between rounded-lg drop-shadow-md mb-5">
-                <span>"UNICON-SOFT" MAS`ULIYATI CHEKLANGAN JAMIYAT</span>
+                <span>HISOB FAKTURA</span>
                 <span className="font-semibold text-slate-700">1234555</span>
             </div>
 
             <div className="cards flex justify-between gap-4 mb-5">
-                <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
-                <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
-                <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
-                <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
+                <HomeCard withHeader={false} amount={2} text="Saqlangan" />
+                <HomeCard withHeader={false} amount={639} text="Imzolashda" />
+                <HomeCard withHeader={false} amount={4606} text="Kontragent imzosida" />
+                <HomeCard withHeader={false} amount={9} text="Qaytarilgan" />
+                <HomeCard withHeader={false} amount={12345} text="Imzolangan" />
             </div>
 
             <div className="card bg-white rounded-lg mb-5">
                 <div className="card-header py-3 px-4 flex justify-between items-center border-b border-slate-200">
-                    <span className='text-slate-700 text-lg font-semibold'>Shartnoma ro'yhati</span>
+                    <span className='text-slate-700 text-lg font-semibold'>Fakturalar ro'yhati</span>
                     <div className='flex gap-5'>
-                        <M.Button variant='outlined'>+ Himoyalangan apparat qurilma</M.Button>
-                        <M.Button variant='outlined'>+ Yangi shartnoma</M.Button>
+                        <M.Button className="font-semibold">Lot raqam tekshirish</M.Button>
+                        <M.Button className="font-semibold">Sinxronizatsiya</M.Button>
+                        <M.Button className="font-semibold">Yuborish</M.Button>
                     </div>
                 </div>
                 <div className="card-body py-3 px-4">
@@ -36,26 +38,20 @@ const Home = () => {
                             <CustomSelect label="Mahsulot turi" menuItems={ MenuItemMockData } />
                         </M.FormControl>
                         <M.FormControl>
-                            <CustomSelect label="Kontragent imzosi" menuItems={ MenuItemMockData } />
+                            <CustomSelect label="Kontragent STIRi" menuItems={ MenuItemMockData } />
                         </M.FormControl>
                         <M.FormControl>
-                            <CustomSelect label="Ijrochi imzosi" menuItems={ MenuItemMockData } />
+                            <CustomSelect label="Shartnoma raqami" menuItems={ MenuItemMockData } />
                         </M.FormControl>
                         <M.FormControl>
-                            <CustomSelect label="Faol" menuItems={ MenuItemMockData } />
+                            <CustomSelect label="Faktura raqami" menuItems={ MenuItemMockData } />
                         </M.FormControl>
-
-                        <M.TextField type={'number'} label="STIR" variant="outlined"  />
-                        <M.TextField label="Shartnoma raqami" variant="outlined" />
-                        <M.TextField label="Tashkilot" variant="outlined" />
-                        
                         <M.FormControl>
                             <CustomSelect label="Holati" menuItems={ MenuItemMockData } />
                         </M.FormControl>
-
+                        
                         <M.Button variant='contained'>Qidirish</M.Button>
-                        <M.Button>Tozalash</M.Button>
-                        <M.Button variant="outlined">Eksport</M.Button>
+                        <M.Button variant="outlined">Tozalash</M.Button>
                     </form>
                 </div>
             </div>
@@ -65,13 +61,14 @@ const Home = () => {
                     <M.Table>
                         <M.TableHead>
                             <M.TableRow>
-                                <M.TableCell className='w-5'>#</M.TableCell>
-                                <M.TableCell className='w-20'>Operator</M.TableCell>
+                                <M.TableCell>#</M.TableCell>
+                                <M.TableCell>Tovar nomi</M.TableCell>
+                                <M.TableCell>Faktura raqami va sanasi</M.TableCell>
+                                <M.TableCell>Shartnoma raqami va sanasi</M.TableCell>
+                                <M.TableCell>Umumiy summa</M.TableCell>
+                                <M.TableCell>Kontragent</M.TableCell>
+                                <M.TableCell>Lot raqami</M.TableCell>
                                 <M.TableCell>Holati</M.TableCell>
-                                <M.TableCell>Raqami va sanani</M.TableCell>
-                                <M.TableCell>Buyurtmachi korxona</M.TableCell>
-                                <M.TableCell>Balans</M.TableCell>
-                                <M.TableCell>Holat (buyurtmachi)</M.TableCell>
                             </M.TableRow>
                         </M.TableHead>
                         <M.TableBody>
@@ -79,22 +76,23 @@ const Home = () => {
                                 new Array(10).fill(1).map((el, index) => (
                                     <StyledTableRow key={"table-cell" + index}>
                                         <M.TableCell>{ index + 1 }</M.TableCell>
-                                        <M.TableCell>M.I.UBAYDULLAYEVA</M.TableCell>
-                                        <M.TableCell>Tasdiqlangan</M.TableCell>
+                                        <M.TableCell>на оказание услуг диная система контроля исполнительской дисциплины IJRO.GOV.UZ</M.TableCell>
                                         <M.TableCell>
                                             <p className='font-semibold'>18152-2022/EXAT</p>
-                                            <p>13 okt. 2022 y. 20:20</p>
+                                            <p>13 okt. 2022 y.</p>
                                         </M.TableCell>
                                         <M.TableCell>
-                                            <p>
-                                                <b>Tel:</b> <span>998919689875</span>
-                                            </p>
-                                            <p>NAV.VIL.GAZNACHILIK.BOSHQARMASI</p>
+                                            <p className='font-semibold'>18152-2022/EXAT</p>
+                                            <p>13 okt. 2022 y.</p>
                                         </M.TableCell>
                                         <M.TableCell>
-                                            <span className='text-red-500 text-xl'>0 so'm</span>
+                                            <span className="font-semibold">404.550 so'm</span>
                                         </M.TableCell>
-                                        <M.TableCell>Ko'rib chiqilmoqda</M.TableCell>
+                                        <M.TableCell>"O`ZBEKISTON RESPUBLIKASI YOSHLAR ISHLARI AGENTLIGI ANGREN SHAHAR BO`LIMI"</M.TableCell>
+                                        <M.TableCell>DX-P-2211001077035</M.TableCell>
+                                        <M.TableCell>
+                                            <M.Button variant="outlined">Sallangan</M.Button>
+                                        </M.TableCell>
                                     </StyledTableRow>
                                 ))
                             }
@@ -106,4 +104,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Invoice
