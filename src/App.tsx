@@ -3,6 +3,7 @@ import Layout from './layout';
 import Home from './views/home';
 import Tokens from './views/tokens';
 import Invoice from './views/invoice';
+import Debitors from './views/debitors';
 import Monitoring from './views/monitoring';
 
 import './App.css';
@@ -15,6 +16,7 @@ function App() {
                 <Route path='monitoring' element={<Monitoring />} />
                 <Route path='invoice' element={<Invoice />} />
                 <Route path='monitoring-tokens' element={<Tokens />} />
+                <Route path='debitors' element={<Debitors />} />
             </Route>
         </Routes>
     );

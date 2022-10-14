@@ -3,25 +3,19 @@ import CustomSelect from "../components/customSelect";
 import { MenuItemMockData } from "../helpers/data";
 import StyledTableRow from "../components/styledTableRow";
 
-const Tokens = () => {
+const Debitors = () => {
     return (
         <div className="p-4">
             <div className="card bg-white rounded-lg mb-5">
                 <div className="card-header py-3 px-4 flex justify-between items-center border-b border-slate-200">
-                    <span className='text-slate-700 text-lg font-semibold'>Tokenlar bo'yicha ro'yhat</span>
+                    <span className='text-slate-700 text-lg font-semibold'>Qarzdorligi mavjud shartnomalar</span>
                 </div>
                 <div className="card-body py-3 px-4">
                     <form>
-                        <div className='grid grid-cols-6 gap-3 mb-3'>
+                        <div className='grid grid-cols-4 gap-3 mb-3'>
                             <M.FormControl>
                                 <CustomSelect label="Operator" menuItems={ MenuItemMockData } />
                             </M.FormControl>
-                            <M.FormControl>
-                                <CustomSelect label="Status" menuItems={ MenuItemMockData } />
-                            </M.FormControl>
-
-                            <M.TextField type={'number'} label="Shartnoma raqami" variant="outlined"  />
-                            <M.FormControlLabel control={<M.Checkbox />} label="Faqat qarzdorlar" />
                         </div>
                         
                         <M.Button sx={{ mr: 2 }} variant='contained'>Qidirish</M.Button>
@@ -40,7 +34,6 @@ const Tokens = () => {
                                 <M.TableCell>Raqami va sanasi</M.TableCell>
                                 <M.TableCell>Buyurtmachi korxona</M.TableCell>
                                 <M.TableCell>Shartnoma summasi</M.TableCell>
-                                <M.TableCell>To'langan summa</M.TableCell>
                                 <M.TableCell>Balans</M.TableCell>
                             </M.TableRow>
                         </M.TableHead>
@@ -49,14 +42,9 @@ const Tokens = () => {
                                 <M.TableCell></M.TableCell>
                                 <M.TableCell></M.TableCell>
                                 <M.TableCell></M.TableCell>
+                                <M.TableCell></M.TableCell>
                                 <M.TableCell>
-                                    <span className="text-lg text-green-600">520,000 so'm</span>
-                                </M.TableCell>
-                                <M.TableCell>
-                                    <span className="text-lg text-green-600">28,123,454 so'm</span>
-                                </M.TableCell>
-                                <M.TableCell>
-                                    <span className="text-lg text-red-700">520,000 so'm</span>
+                                    <span className="text-lg text-red-600">28,123,454 so'm</span>
                                 </M.TableCell>
                             </StyledTableRow>
                             {
@@ -74,9 +62,6 @@ const Tokens = () => {
                                             <span className="text-lg">520,000 so'm</span>
                                         </M.TableCell>
                                         <M.TableCell>
-                                            <span className="text-lg text-red-700">0</span>
-                                        </M.TableCell>
-                                        <M.TableCell>
                                             <span className="text-lg text-red-700">520,000 so'm</span>
                                         </M.TableCell>
                                     </StyledTableRow>
@@ -90,4 +75,4 @@ const Tokens = () => {
     )
 }
 
-export default Tokens
+export default Debitors
