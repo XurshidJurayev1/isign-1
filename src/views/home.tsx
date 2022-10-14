@@ -7,17 +7,25 @@ import StyledTableRow from "../components/styledTableRow";
 const Home = () => {
     return (
         <div className="p-4">
-            <div className="bg-white p-4 flex justify-between rounded-lg drop-shadow-md mb-5">
-                <span>"UNICON-SOFT" MAS`ULIYATI CHEKLANGAN JAMIYAT</span>
+            <div className="bg-white p-4 flex justify-between rounded-lg mb-5">
+                <span className="font-semibold text-slate-700">"UNICON-SOFT" MAS`ULIYATI CHEKLANGAN JAMIYAT</span>
                 <span className="font-semibold text-slate-700">1234555</span>
             </div>
 
-            <div className="cards flex justify-between gap-4 mb-5">
-                <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
-                <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
-                <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
-                <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
-            </div>
+            <M.Grid container spacing={2} marginBottom={2}>
+                <M.Grid item xs={3}>
+                    <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
+                </M.Grid>
+                <M.Grid item xs={3}>
+                    <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
+                </M.Grid>
+                <M.Grid item xs={3}>
+                    <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
+                </M.Grid>
+                <M.Grid item xs={3}>
+                    <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
+                </M.Grid>
+            </M.Grid>
 
             <div className="card bg-white rounded-lg mb-5">
                 <div className="card-header py-3 px-4 flex justify-between items-center border-b border-slate-200">

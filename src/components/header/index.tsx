@@ -14,7 +14,7 @@ const navLinks = [
 
 const Header = () => {
     return (
-        <header className="drop-shadow-lg bg-white">
+        <header className="bg-white">
                 <div className="header__top flex items-center px-4 py-3 justify-between border-b border-slate-200">
                     <div className="header__brand flex items-center">
                         <div className="mr-2">

@@ -1,3 +1,5 @@
+import * as M from '@mui/material'
+
 interface HomeCardProps {
     name?: string,
     amount: string | number,
@@ -7,15 +9,19 @@ interface HomeCardProps {
 
 const HomeCard = ({ name, amount, text, withHeader }: HomeCardProps) => {
     return (
-        <div className="bg-white w-full rounded-lg drop-shadow-md hover:drop-shadow-xl">
+        <M.Card>
             {
-                withHeader && <div className="card-header text-sm px-4 py-3 border-b border-slate-200">{ name }</div>
+                withHeader && <M.CardHeader subheader={ name } sx={{ borderBottom: "1px solid grey" }} />
             }
-            <div className="card-body px-4 py-3 flex flex-col items-center">
-                <span className="text-4xl text-slate-500 font-semibold">{ amount }</span>
-                <span className="text-sm font-semibold">{ text }</span>
-            </div>
-        </div>
+            <M.CardContent>
+                <M.Typography variant="h3" color="text.secondary" sx={{ fontWeight: 600, textAlign: 'center' }}>
+                    { amount }
+                </M.Typography>
+                <M.Typography variant="body2" color="text.secondary" sx={{ fontWeight: 600, textAlign: 'center' }}>
+                    { text }
+                </M.Typography>
+            </M.CardContent>
+        </M.Card>
     )
 }
 

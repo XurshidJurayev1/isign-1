@@ -7,18 +7,28 @@ import StyledTableRow from "../components/styledTableRow";
 const Invoice = () => {
     return (
         <div className="p-4">
-            <div className="bg-white p-4 flex justify-between rounded-lg drop-shadow-md mb-5">
+            <div className="bg-white p-4 flex justify-between rounded-lg mb-5">
                 <span>HISOB FAKTURA</span>
                 <span className="font-semibold text-slate-700">1234555</span>
             </div>
 
-            <div className="cards flex justify-between gap-4 mb-5">
-                <HomeCard withHeader={false} amount={2} text="Saqlangan" />
-                <HomeCard withHeader={false} amount={639} text="Imzolashda" />
-                <HomeCard withHeader={false} amount={4606} text="Kontragent imzosida" />
-                <HomeCard withHeader={false} amount={9} text="Qaytarilgan" />
-                <HomeCard withHeader={false} amount={12345} text="Imzolangan" />
-            </div>
+            <M.Grid container spacing={2} marginBottom={2}>
+                <M.Grid item xs >
+                    <HomeCard withHeader={false} amount={2} text="Saqlangan" />
+                </M.Grid>
+                <M.Grid item xs >
+                    <HomeCard withHeader={false} amount={639} text="Imzolashda" />
+                </M.Grid>
+                <M.Grid item xs >
+                    <HomeCard withHeader={false} amount={4606} text="Kontragent imzosida" />
+                </M.Grid>
+                <M.Grid item xs >
+                    <HomeCard withHeader={false} amount={9} text="Qaytarilgan" />
+                </M.Grid>
+                <M.Grid item xs >
+                    <HomeCard withHeader={false} amount={12345} text="Imzolangan" />
+                </M.Grid>
+            </M.Grid>
 
             <div className="card bg-white rounded-lg mb-5">
                 <div className="card-header py-3 px-4 flex justify-between items-center border-b border-slate-200">

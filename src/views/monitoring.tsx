@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 const Monitoring = () => {
     return (
         <div className="p-4">
-            <div className="bg-white p-4 flex justify-between rounded-lg drop-shadow-md mb-5">
+            <div className="bg-white p-4 flex justify-between rounded-lg mb-5">
                 <span>Monitoring paneli</span>
                 <span className="font-semibold text-slate-700">Operatorlar monitoringi</span>
             </div>
