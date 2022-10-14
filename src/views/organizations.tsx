@@ -1,11 +1,25 @@
+import { SyntheticEvent, useState } from "react";
 import * as M from "@mui/material"
 import CustomSelect from "../components/customSelect";
 import { MenuItemMockData } from "../helpers/data";
 import StyledTableRow from "../components/styledTableRow";
 
 const Organizations = () => {
+    const [ tab, setTab ] = useState("organization")
+
+    const handleChange = (e: SyntheticEvent, newValue: string) => {
+        setTab(newValue)
+    }
+
     return (
         <div className="p-4">
+            <div className="card bg-white rounded-lg mb-5">
+                <M.Tabs value={tab} onChange={ handleChange } >
+                    <M.Tab label="Tashkilotlar bo'yicha" value="organization" />
+                    <M.Tab label="Tumanlar bo'yicha" value="region" />
+                </M.Tabs>
+            </div>
+
             <div className="card bg-white rounded-lg mb-5">
                 <div className="card-header py-3 px-4 flex justify-between items-center border-b border-slate-200">
                     <span className='text-slate-700 text-lg font-semibold'>Tashkilotlar ro'yhati</span>
