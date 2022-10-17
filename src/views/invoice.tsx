@@ -3,30 +3,28 @@ import HomeCard from "../components/homaCard";
 import CustomSelect from "../components/customSelect";
 import { MenuItemMockData } from "../helpers/data";
 import StyledTableRow from "../components/styledTableRow";
+import PageHeader from "../components/header/pageHeader";
 
 const Invoice = () => {
     return (
         <div className="p-4">
-            <div className="bg-white p-4 flex justify-between rounded-lg mb-5">
-                <span>HISOB FAKTURA</span>
-                <span className="font-semibold text-slate-700">1234555</span>
-            </div>
+            <PageHeader text1="HISOB FAKTURA" text2="12334" />
 
             <M.Grid container spacing={2} marginBottom={2}>
                 <M.Grid item xs >
                     <HomeCard withHeader={false} amount={2} text="Saqlangan" />
                 </M.Grid>
                 <M.Grid item xs >
-                    <HomeCard withHeader={false} amount={639} text="Imzolashda" />
+                    <HomeCard withHeader={false} amount={639} text="Imzolashda" color="#f59e0b" />
                 </M.Grid>
                 <M.Grid item xs >
-                    <HomeCard withHeader={false} amount={4606} text="Kontragent imzosida" />
+                    <HomeCard withHeader={false} amount={4606} text="Kontragent imzosida" color="#f59e0b" />
                 </M.Grid>
                 <M.Grid item xs >
-                    <HomeCard withHeader={false} amount={9} text="Qaytarilgan" />
+                    <HomeCard withHeader={false} amount={9} text="Qaytarilgan" color="#ef4444" />
                 </M.Grid>
                 <M.Grid item xs >
-                    <HomeCard withHeader={false} amount={12345} text="Imzolangan" />
+                    <HomeCard withHeader={false} amount={12345} text="Imzolangan" color="#22c55e" />
                 </M.Grid>
             </M.Grid>
 

@@ -1,13 +1,11 @@
 import * as M from "@mui/material"
 import { styled } from '@mui/material/styles';
+import PageHeader from "../components/header/pageHeader";
 
 const Monitoring = () => {
     return (
         <div className="p-4">
-            <div className="bg-white p-4 flex justify-between rounded-lg mb-5">
-                <span>Monitoring paneli</span>
-                <span className="font-semibold text-slate-700">Operatorlar monitoringi</span>
-            </div>
+            <PageHeader text1="Monitoring paneli" text2="Operatorlar monitoringi" />
 
             <M.Paper>
                 <M.TableContainer>
