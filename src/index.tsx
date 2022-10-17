@@ -1,13 +1,38 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom'
+import {unstable_HistoryRouter as HistoryRouter} from 'react-router-dom';
+import {Provider} from 'react-redux';
+
 import App from './App';
+import {setupStore} from './redux/store';
+import history from './helpers/history';
+import './i18Next';
+
+export const Loader = () => {
+    return (
+        <div
+            style={{
+                width: '100%',
+                minHeight: '100vh',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}
+        >
+            <h1>Loading...</h1>
+        </div>
+    );
+};
+
+export const store = setupStore();
 
 ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </React.StrictMode>
-    , document.getElementById('root')
+    <Provider store={store}>
+        <HistoryRouter history={history}>
+            <Suspense fallback={<Loader />}>
+                <App />
+            </Suspense>
+        </HistoryRouter>
+    </Provider>,
+    document.getElementById('root')
 );

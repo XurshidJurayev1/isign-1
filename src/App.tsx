@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import Layout from './layout';
 import Home from './views/home';
 import Tokens from './views/tokens';
@@ -12,8 +12,11 @@ import './App.css';
 function App() {
     return (
         <Routes>
-            <Route path='/' element={<Layout />}>
-                <Route path='home' element={<Home />} />
+            <Route path="/" element={<Layout />}>
+                <Route path="home" element={<Home />} />
+                <Route path="invoice">
+                    <Route path="list" element={<Home />} />
+                </Route>
                 <Route path='monitoring' element={<Monitoring />} />
                 <Route path='invoice' element={<Invoice />} />
                 <Route path='generate-lot-id' element={<Invoice />} />

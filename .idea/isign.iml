@@ -5,18 +5,6 @@
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
-      <excludeFolder url="file://$MODULE_DIR$/build" />
-      <excludeFolder url="file://$MODULE_DIR$/src/redux/action" />
-      <excludeFolder url="file://$MODULE_DIR$/src/redux/reducer" />
-      <excludeFolder url="file://$MODULE_DIR$/src/assets" />
-      <excludeFolder url="file://$MODULE_DIR$/src/components" />
-      <excludeFolder url="file://$MODULE_DIR$/src/dictionaries" />
-      <excludeFolder url="file://$MODULE_DIR$/src/enums" />
-      <excludeFolder url="file://$MODULE_DIR$/src/interfaces" />
-      <excludeFolder url="file://$MODULE_DIR$/src/layout" />
-      <excludeFolder url="file://$MODULE_DIR$/src/pages" />
-      <excludeFolder url="file://$MODULE_DIR$/src/routes" />
-      <excludeFolder url="file://$MODULE_DIR$/src/types" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
