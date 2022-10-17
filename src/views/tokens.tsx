@@ -5,7 +5,7 @@ import StyledTableRow from "../components/styledTableRow";
 
 const Tokens = () => {
     return (
-        <div className="p-4">
+        <div className="p-4 mt-16">
             <div className="card bg-white rounded-lg mb-5">
                 <div className="card-header py-3 px-4 flex justify-between items-center border-b border-slate-200">
                     <span className='text-slate-700 text-lg font-semibold'>Tokenlar bo'yicha ro'yhat</span>

@@ -7,7 +7,7 @@ import PageHeader from "../components/header/pageHeader";
 
 const Invoice = () => {
     return (
-        <div className="p-4">
+        <div className="p-4 mt-16">
             <PageHeader text1="HISOB FAKTURA" text2="12334" />
 
             <M.Grid container spacing={2} marginBottom={2}>

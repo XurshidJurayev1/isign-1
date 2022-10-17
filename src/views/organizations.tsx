@@ -12,7 +12,7 @@ const Organizations = () => {
     }
 
     return (
-        <div className="p-4">
+        <div className="p-4 mt-16">
             <div className="card bg-white rounded-lg mb-5">
                 <M.Tabs value={tab} onChange={ handleChange } >
                     <M.Tab label="Tashkilotlar bo'yicha" value="organization" />

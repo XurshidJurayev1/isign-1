@@ -4,7 +4,7 @@ import PageHeader from "../components/header/pageHeader";
 
 const Monitoring = () => {
     return (
-        <div className="p-4">
+        <div className="p-4 mt-16">
             <PageHeader text1="Monitoring paneli" text2="Operatorlar monitoringi" />
 
             <M.Paper>
