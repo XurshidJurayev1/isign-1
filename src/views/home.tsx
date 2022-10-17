@@ -2,28 +2,26 @@ import * as M from "@mui/material"
 import HomeCard from "../components/homaCard";
 import { MenuItemMockData } from "../helpers/data";
 import CustomSelect from "../components/customSelect";
+import PageHeader from "../components/header/pageHeader";
 import StyledTableRow from "../components/styledTableRow";
 
 const Home = () => {
     return (
         <div className="p-4">
-            <div className="bg-white p-4 flex justify-between rounded-lg mb-5">
-                <span className="font-semibold text-slate-700">"UNICON-SOFT" MAS`ULIYATI CHEKLANGAN JAMIYAT</span>
-                <span className="font-semibold text-slate-700">1234555</span>
-            </div>
+            <PageHeader text1={`"UNICON-SOFT" MAS'ULIYATI CHEKLANGAN JAMIYAT`} text2="12334" />
 
             <M.Grid container spacing={2} marginBottom={2}>
                 <M.Grid item xs={3}>
-                    <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
+                    <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader  />
                 </M.Grid>
                 <M.Grid item xs={3}>
-                    <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
+                    <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader color="#ef4444" />
                 </M.Grid>
                 <M.Grid item xs={3}>
-                    <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
+                    <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader color="#f59e0b" />
                 </M.Grid>
                 <M.Grid item xs={3}>
-                    <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader />
+                    <HomeCard name="Shartnomalar" amount={12345} text={"soni"} withHeader color="#22c55e" />
                 </M.Grid>
             </M.Grid>
 
